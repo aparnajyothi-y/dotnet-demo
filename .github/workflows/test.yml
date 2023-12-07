@@ -1,0 +1,41 @@
+name: test
+
+on:
+  workflow_dispatch:
+  
+
+jobs:
+  test-setup-v4:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup dotnet 2.2.402, 3.1.404 and 3.0.x
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+           6.0.x
+           8.0.x
+ 
+  test-setup-v3:
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup dotnet 2.2.402, 3.1.404 and 3.0.x
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+           6.0.x
+           8.0.x
+     

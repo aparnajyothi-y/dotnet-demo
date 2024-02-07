@@ -21,8 +21,7 @@ jobs:
           dotnet-version: |
            6.0.x
            8.0.x
-      - name: Check tool size
-        run: du -sh /Users/runner/work/_actions/actions/setup-dotnet/v4/externals/install-dotnet.sh
+   
      
 
      

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hlSL4hVuzZnhKdEMKa/u4XQh6LwIYJzkQbeIO4iw+qIQmGtq78R6zX3JJFMwXwevZwDRZZ42flvAlx1ddJta8A==",
+  "success": true,
+  "projectFilePath": "/Users/shaanmugapriya/Sample506/WebApplication/WebApplication.csproj",
+  "expectedPackageFiles": [
+    "/Users/shaanmugapriya/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

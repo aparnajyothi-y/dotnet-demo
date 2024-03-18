@@ -21,6 +21,13 @@ jobs:
           dotnet-version: |
            6.0.x
            8.0.x
+
+      - name: Set Environment Variables
+        run: |
+           echo "DOTNET_CLI_HOME=$HOME" >> $GITHUB_ENV
+           echo "HOME=$HOME" >> $GITHUB_ENV
+      - name: Run dotnet command
+        run: dotnet build
    
      
 

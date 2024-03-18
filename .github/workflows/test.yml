@@ -27,7 +27,9 @@ jobs:
            echo "DOTNET_CLI_HOME=$HOME" >> $GITHUB_ENV
            echo "HOME=$HOME" >> $GITHUB_ENV
       - name: Run dotnet command
-        run: dotnet build
+        run: |
+         cd myProjectDirectory
+         dotnet build
    
      
 

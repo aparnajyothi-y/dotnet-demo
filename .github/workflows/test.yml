@@ -28,7 +28,7 @@ jobs:
            echo "HOME=$HOME" >> $GITHUB_ENV
       - name: Run dotnet command
         run: |
-         cd myProjectDirectory
+         cd testoutput.sln
          dotnet build
    
      

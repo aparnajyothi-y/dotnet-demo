@@ -11,12 +11,15 @@ jobs:
     env:
       DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
     steps:
-      - uses: actions/checkout@v4
-        timeout-minutes: 1
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "7.0.x"
-        timeout-minutes: 1
-      - name: Restore dependencies
-        run: dotnet restore test-proj.csproj
-      - run: dotnet build --no-restore test-proj.csproj
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x' # Specify the .NET 8.0 SDK version
+
+    - name: Restore dependencies
+      run: dotnet restore test-proj.csproj
+
+    - name: Build
+      run: dotnet build --no-restore test-proj.csproj

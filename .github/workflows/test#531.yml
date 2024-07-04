@@ -1,0 +1,21 @@
+name: test #531
+
+on:
+  workflow_dispatch:
+  
+
+jobs:
+ 
+ test:
+    runs-on: [ubuntu-24.04]
+    env:
+      DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
+    steps:
+      - uses: actions/checkout@v4
+        timeout-minutes: 1
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "7.0.x"
+        timeout-minutes: 1
+      - run: dotnet restore
+      - run: dotnet build --no-restore

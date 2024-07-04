@@ -18,5 +18,5 @@ jobs:
           dotnet-version: "7.0.x"
         timeout-minutes: 1
       - name: Restore dependencies
-        run: dotnet restore ./test-proj.csproj
+        run: dotnet restore test-proj.csproj
       - run: dotnet build --no-restore

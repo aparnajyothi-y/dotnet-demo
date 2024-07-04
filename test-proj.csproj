@@ -7,7 +7,7 @@
 
  <ItemGroup>
   <PackageReference Include="Microsoft.AspNetCore.App" />
-  <PackageReference Include="Microsoft.Extensions" Version="x.x.x" />
+  <PackageReference Include="Microsoft.Extensions" Version="7.0.0" />
 </ItemGroup>
 
 </Project>

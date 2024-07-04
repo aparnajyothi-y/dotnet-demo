@@ -5,8 +5,9 @@
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <!-- Your package references go here -->
-  </ItemGroup>
+ <ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+  <PackageReference Include="Microsoft.Extensions" Version="x.x.x" />
+</ItemGroup>
 
 </Project>

@@ -19,7 +19,5 @@ jobs:
         dotnet-version: '8.0.x' # Specify the .NET 8.0 SDK version
 
     - name: Restore dependencies
-      run: dotnet restore test-proj.csproj
-
-    - name: Build
-      run: dotnet build --no-restore test-proj.csproj
+    - run: dotnet restore test-proj.csproj
+    - run: dotnet build --no-restore test-proj.csproj
